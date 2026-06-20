@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กำลังใจสำหรับเธอ 🌞</title>
+
+
+<style>
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#ffe4ec,#fff6d6);
+    font-family: 'Segoe UI',sans-serif;
+}
+
+button{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #ff8fab;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 320px;
+    animation: pop 0.4s eses;
+}
+
+@keyframes pop{
+    from{transform: scale(0.7);}
+    to{transform: scale(1);}
+}
+
+h2{
+    color: #555;
+    line-height: 1.6;
+}
+
+.close{
+    margin-top: 15px;
+    background: #ffd166;
+    color: #333;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="showPopup()">🌞 เปิดข้อความพิเศษ</button>
+
+<div class="popup" id="popup">
+    <div class="card">
+        <h2>🤍 Little Sunshine 🌞</h2>
+        <p>
+            วันนี้อาจจะเหนื่อยหน่อยนะ<br>
+            แต่เธอเก่งมากแล้ว 🌻<br><br>
+            ขอให้ยิ้มได้มากขึ้นอีกนิด<br>
+            และอย่าลืมว่ามีคนกำลังให้กำลังใจเธอเสมอนะ ✨
+        </p>
+        <button class="close" onclick="hidePopup()">🤍 ขอบคุณนะ</button>
+    </div>
+</div>
+
+<script>
+    function showPopup(){
+        document.getElementById("popup").style.display="flex";
+    }
+
+    function hidePopup(){
+        document.getElementById("popup").style.display="none";
+    }
+</script>
+
+</body>
+</html>
